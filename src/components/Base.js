@@ -142,13 +142,13 @@ class Base extends Component {
         }
 
         return (
-            <div>
+            <div className="">
             <Router>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-0 py-3 position-sticky top-0">
+            <nav className="navbar navbar-expand-lg bg-gradient navbar-dark bg-dark px-0 py-3 position-sticky top-0">
                 <div className="container-xl">
-                    <a className="navbar-brand mb-0 h1" href="#">
+                    <Link className="navbar-brand mb-0 h1" to="/">
                         SHOP
-                    </a>
+                    </Link>
                     <button className="navbar-toggler" onClick={this.navbarHandler} type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -158,7 +158,7 @@ class Base extends Component {
                             <Link to='/products' className="nav-item nav-link">Products</Link>
                             <div className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" onClick={this.dropdownHandler} href="#" id="navbarDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
-                                <ul className={menuClass} aria-labelledby="navbarDropdownMenue">
+                                <ul className={`${menuClass}`} aria-labelledby="navbarDropdownMenue">
                                     {categories.map(category => <this.DropdownItem key={category.name} category={category}/>)}
                                 </ul>
                             </div>

@@ -53,7 +53,7 @@ class Chats extends Component {
         u1 = res[1]
         u2 = res[2]
         let receiver = u1
-        if (receiver === this.state.author) {
+        if (receiver === this.state.username) {
           receiver = u2
         }
         var handler = this.submitHandler

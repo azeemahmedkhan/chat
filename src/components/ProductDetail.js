@@ -78,7 +78,7 @@ class ProductDetail extends Component {
         const {vendor} = this.state
         return (
             <div className="container-md mt-3 border border-dark p-4 rounded shadow-3">
-                <div class="card border border-dark">
+                <div class="card bg-dark shadow-4">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <div class="p-2">
@@ -87,11 +87,11 @@ class ProductDetail extends Component {
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h3 class="h4">{product.name}</h3>
-                                <span class="d-block text-muted text-sm font-semibold mt-2">{category.name}</span>
-                                <p class="mt-4 mb-6">
+                                <h2 class="h2 text-white">{product.name}</h2>
+                                <span class="d-block text-muted text-sm font-semibold mt-2 text-white">{category.name}</span>
+                                <h4 class="mt-4 mb-6 text-white">
                                     {product.description}
-                                </p>
+                                </h4>
                             </div>
                         </div>
                     </div>
