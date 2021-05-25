@@ -12,6 +12,7 @@ import Chats from './Chats'
 import {BrowserRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom';
 import GetUser from "./GetUser";
 import LoggedOut from './LoggedOut';
+import Home from './Home';
 
 class Base extends Component {
     constructor(props) {
@@ -54,7 +55,7 @@ class Base extends Component {
     RegisterButton = () => {
         return (
             <div className="d-flex align-items-lg-center mt-3 mt-lg-0">
-                <Link to="/Register" className="btn btn-sm btn-primary w-full w-lg-auto">
+                <Link to="/Register" className="btn btn-sm w-full w-lg-auto gradient-bottom-right start-indigo-500 end-blue-500 text-white">
                     Register
                 </Link>
             </div>            
@@ -72,7 +73,7 @@ class Base extends Component {
     ChatsButton = () => {
         return (
             <div className="d-flex align-items-lg-center mt-3 mt-lg-0">
-                <Link to="/chats" className="btn btn-sm btn-primary w-full w-lg-auto">
+                <Link to="/chats" className="btn btn-sm w-full w-lg-auto gradient-bottom-right start-indigo-500 end-blue-500 text-white">
                     Chats
                 </Link>
             </div>            
@@ -153,7 +154,7 @@ class Base extends Component {
                     </button>
                     <div className={navbarClass} id="navbarCollapse">
                         <div className="navbar-nav mx-lg-auto">
-                            <a className="nav-item nav-link active" href="#" aria-current="page">Home</a>
+                            <Link className="nav-item nav-link active" to="/" aria-current="page">Home</Link>
                             <Link to='/products' className="nav-item nav-link">Products</Link>
                             <div className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" onClick={this.dropdownHandler} href="#" id="navbarDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
@@ -170,6 +171,7 @@ class Base extends Component {
                 </div>
             </nav>
             <Switch>
+                <Route exact path="/" component={Home}></Route>
                 <Route exact path="/loggedout" render={(props) => <LoggedOut handler={this.logOutHandler}/>}></Route>
                 <Route exact path="/success" component={GetUser}></Route>
                 <Route exact path="/products" render={(props) => <Products user={this.state.user} token={this.state.token}/>}></Route>

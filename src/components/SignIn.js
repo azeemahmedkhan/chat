@@ -80,7 +80,7 @@ class SignIn extends Component {
                         <label className="form-label" for="password">Password</label>
                         <input className="form-control" id="password" type="password" name="password" value={this.state.password} placeholder="Password" onChange={this.changeHandler}></input>
                     </div>
-                    <button className="btn btn-primary w-full" type="submit">Sign In</button>
+                    <button className="btn w-full gradient-bottom-right start-indigo-500 end-blue-500 text-white mt-3" type="submit">Sign In</button>
                 </form>
         )
     }
@@ -98,7 +98,7 @@ class SignIn extends Component {
         return (
             <div>
                 <div className="alert alert-success" role="alert">
-                    you are successfully Logged In! Press the button to get started!
+                    you are successfully Logged In!
                 </div>
             </div>
         )

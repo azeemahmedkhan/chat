@@ -119,7 +119,7 @@ class Register extends Component {
                         <input className="form-check-input" id="is_vendor" type="checkbox" name="is_vendor" value={this.state.is_vendor} onClick={this.vendorHandler}></input>
                         <label className="form-check-label" for="is_vendor">Register as vendor</label>
                     </div>
-                    <button className="btn btn-primary w-full" type="submit">Register</button>
+                    <button className="btn w-full gradient-bottom-right start-indigo-500 end-blue-500 text-white" type="submit">Register</button>
                 </form>
             </div>
         )

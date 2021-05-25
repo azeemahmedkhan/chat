@@ -90,29 +90,15 @@ class ProductDetail extends Component {
                                 <h3 class="h4">{product.name}</h3>
                                 <span class="d-block text-muted text-sm font-semibold mt-2">{category.name}</span>
                                 <p class="mt-4 mb-6">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare pretium placerat ut platea...
+                                    {product.description}
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div className="card mt-5 border border-dark">
-                    <div className="row g-0">
-                        <div className="col-md-6">
-                            <div className="p-2">
-                                <h3>{vendor.username}</h3>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="p-3">
-                            <button className="btn btn-outline-primary mt-5 w-full" onClick={this.createRoomHandler}>
-                                START CHAT
-                            </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <button className="btn mt-5 w-full gradient-bottom-right start-indigo-500 end-blue-500 text-white" onClick={this.createRoomHandler}>
+                            Start Chat
+                        </button>
             </div>
         )
     }

@@ -38,7 +38,7 @@ class Products extends Component {
                         <h5 class="mt-2 mb-2">
                             {props.product.price} Rs
                         </h5>
-                        <Link to={`./products/${props.product.slug}`} className="btn btn-sm btn-primary">Learn More</Link>
+                        <Link to={`./products/${props.product.slug}`} className="btn btn-sm gradient-bottom-right start-indigo-500 end-blue-500 text-white">View Product</Link>
                     </div>
                 </div>
             </div>

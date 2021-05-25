@@ -47,14 +47,22 @@ class Chats extends Component {
     }
 
     chatsCard = (props) => {
+        let room_name = props.room.room_name
+        let res, u1, u2
+        res = room_name.split("_")
+        u1 = res[1]
+        u2 = res[2]
+        let receiver = u1
+        if (receiver === this.state.author) {
+          receiver = u2
+        }
         var handler = this.submitHandler
         return (
             <div className="mt-2">
                 <div className="card bg-primary">
-                    <div className="card-body">
-                        <h1 className="display">Room Name: {props.room.room_name}</h1>
-                        <button className="btn btn-success" onClick={() => handler(props.room)}>Chat</button>
-                    </div>
+                        <button className="btn gradient-bottom-right start-indigo-300 middle-purple-400 end-indigo-500" onClick={() => handler(props.room)}>
+                            <h2 className="text-white">Chat With {receiver}</h2>
+                        </button>
                 </div>
             </div>
         )
